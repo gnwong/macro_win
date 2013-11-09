@@ -1,0 +1,10 @@
+# Number of repeats
+REPEATS=1
+WAIT=0
+# Commands in form:
+# OPR (ARG1) (ARG2) [trailing space]
+PAU 0.2 
+CLK 0 
+MOV 10 20 
+TYP hello world 
+
