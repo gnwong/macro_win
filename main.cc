@@ -92,6 +92,16 @@ int main (int argc, char **argv) {
       if (MSteps.at(j).ins_t()==4) {
         Sleep((int)(MSteps.at(j).arg_d(1)*1000+0.5));
       }
+      // position
+      if (MSteps.at(j).ins_t()==5) {
+        size_t xpos = 0;
+        size_t ypos = 0;
+        while (true) {
+          MOUSE::position(xpos,ypos);
+          std::cout << "POS: " << xpos << " | " << ypos << std::endl; 
+          Sleep(200);
+        }
+      }
     }
   }  
   

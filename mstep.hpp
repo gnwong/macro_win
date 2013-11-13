@@ -33,6 +33,7 @@ class MStep {
       if (this->INS.compare(std::string("CLK"))==0) return 2;
       if (this->INS.compare(std::string("TYP"))==0) return 3;
       if (this->INS.compare(std::string("PAU"))==0) return 4;
+      if (this->INS.compare(std::string("POS"))==0) return 5;
       return 0;
     }
     
