@@ -32,6 +32,8 @@ Valid commands are:
 * POS del - Reports the position of the mouse every "del" seconds or once if del=0
 * TYP string - Types the given string on the keyboard
 
+Each macro command line (with the exception of TYP) must have a space character following the last argument. The full file must end in a new line character.
+
 The `-m` flag may be added after calling `main.exe` as in
 ```bash
 main.exe -m name.macro
