@@ -3,8 +3,7 @@ macro_win  `main.exe'
 ## Click / Keystroke Macro Program (Windows)
 
 
-Use (Quickstart)
-----------------
+### Use (Quickstart)
 A compiled binary of the latest version of the code is available at
 `build/main.exe`. `main.exe` and the `default.macro` file in the same
 directory may be downloaded and run as is.
@@ -44,8 +43,7 @@ A help page may be printed to the terminal by appending the `-h` flag to `main.e
 main.exe -h
 ```
 
-Building from Source
---------------------
+### Building from Source
 The `main.exe` program may be compiled by source; all necessary files have been included in this repository in the root directory.
 
 The following files should be included:
@@ -58,8 +56,7 @@ The following files should be included:
 The code was developed using Bloodshed Dev-C++ version 4.9.9.2, released under the GNU General Public License version 2.
 
 
-Issues
-------
+### Issues
 * No dynamic text/mouse positions
 * Not all keyboard characters are supported at this time
 * No up/down click "drag" feature
