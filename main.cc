@@ -99,7 +99,8 @@ int main (int argc, char **argv) {
         while (true) {
           MOUSE::position(xpos,ypos);
           std::cout << "POS: " << xpos << " | " << ypos << std::endl; 
-          Sleep(200);
+          if (MSteps.at(j).arg_d(1)==0) break;
+          Sleep((int)(MSteps.at(j).arg_d(1)*1000+0.5));
         }
       }
     }
@@ -111,6 +112,38 @@ int main (int argc, char **argv) {
 // Print man page
 void man () {
  std::cout << " =================================================\n"
+           << " macro_win  `main.exe' \n\n"
+           << " This program automatically clicks and moves the\n"
+           << " mouse, types with the keyboard, and pauses for\n"
+           << " fractional amounts of time. It can also report\n"
+           << " the position of the mouse (x,y) at any given time.\n\n"
+           << " When run, it loads a predefined `.macro' file as\n"
+           << " provided by the user.\n\n"
+           << " The default macro file is named `default.macro',\n"
+           << " but another macro file may be added by adding\n"
+           << " a `-m name.macro' flag after `main.exe'.\n\n"
+           << " The macro file is formatted as follows:\n\n-----------\n"
+           << " # Number of repeats\n REPEATS=1\n WAIT=0\n"
+           << " # Commands in form:\n"
+           << " # OPR (ARG1) (ARG2) [trailing space]\n"
+           << " PAU 0.2 \n CLK 0 \n MOV 10 20 \n"
+           << " TYP hello world \n POS \n \n"
+           << " ----------\n\n"
+           << " The 2nd and 3rd lines must be in given form and\n"
+           << " instructions must begin on the 6th line. Valid\n"
+           << " operations are:\n > PAU SEC     : Pause for SEC seconds\n"
+           << " > MOV X Y     : Move the mouse to position (x,y)\n"
+           << " > CLK BTN     : Click with left (0) or right (1)\n"
+           << "                 mouse button\n"
+           << " > POS DEL     : Report the position of the mouse\n"
+           << "                 every DEL seconds (or once if\n"
+           << "                 DEL is zero)\n"
+           << " > TYP STRING  : Type STRING (any combination of\n"
+           << "                 letters, numbers, symbols, and\n"
+           << "                 spaces\n\n"
+           << " All commands (with the exception of TYP) must be\n"
+           << " followed by a space character. The full file must\n"
+           << " end in a new line character.\n"
            << " =================================================" << std::endl;
 }
 
