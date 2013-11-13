@@ -147,7 +147,7 @@ void man () {
            << " =================================================" << std::endl;
 }
 
-
+// Parse command line arguments
 int parseCmd (int argc, char **argv, const char **fname) {
   
   for (int i=0; i<argc; i++) {
